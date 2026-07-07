@@ -1,11 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Tarefa</title>
+
+    <title>Nova Tarefa | ProjectManager</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
 </head>
+
 <body>
-    
+
+    <div class="wrapper">
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                ProjectManager
+            </div>
+
+            <ul>
+
+                <li><a href="dashboard.html">🏠 Dashboard</a></li>
+
+                <li><a href="projetos.html">📁 Projetos</a></li>
+
+                <li><a href="tarefas.html">✅ Tarefas</a></li>
+
+                <li><a href="usuarios.html">👥 Usuários</a></li>
+
+                <li><a href="notificacoes.html">🔔 Notificações</a></li>
+
+                <li><a href="index.html">🚪 Sair</a></li>
+
+            </ul>
+
+        </aside>
+
+        <main class="content">
+
+            <div class="header">
+
+                <h2>Cadastro de Tarefa</h2>
+
+            </div>
+
+            <div class="form">
+
+                <div class="grid-2">
+
+                    <div class="form-group">
+
+                        <label>Título</label>
+
+                        <input type="text" placeholder="Nome da tarefa">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Projeto</label>
+
+                        <select>
+
+                            <option>Sistema Acadêmico</option>
+
+                            <option>Portal Web</option>
+
+                            <option>ERP Financeiro</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Responsável</label>
+
+                        <select>
+
+                            <option>Renan Lima</option>
+
+                            <option>Ana Souza</option>
+
+                            <option>Carlos Oliveira</option>
+
+                            <option>Pedro Santos</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Status</label>
+
+                        <select>
+
+                            <option>A Fazer</option>
+
+                            <option>Em Andamento</option>
+
+                            <option>Concluída</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Prioridade</label>
+
+                        <select>
+
+                            <option>Alta</option>
+
+                            <option>Média</option>
+
+                            <option>Baixa</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Prazo</label>
+
+                        <input type="date">
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Descrição</label>
+
+                    <textarea placeholder="Descrição da tarefa"></textarea>
+
+                </div>
+
+                <div class="grid-2">
+
+                    <button class="btn btn-blue">
+
+                        Salvar Tarefa
+
+                    </button>
+
+                    <button class="btn btn-red" onclick="history.back()">
+
+                        Cancelar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
 </body>
+
 </html>
