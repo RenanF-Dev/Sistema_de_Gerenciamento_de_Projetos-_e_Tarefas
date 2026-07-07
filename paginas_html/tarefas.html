@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="/css/forms.css">
     <link rel="stylesheet" href="/css/tables.css">
 
+    <script src="/js/script.js"></script>
+    <script src="/js/tarefas.js"></script>
+    <script src="/js/filtros.js"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
@@ -75,12 +79,7 @@
 
                     <label>Projeto</label>
 
-                    <select>
-
-                        <option>Todos</option>
-                        <option>Sistema Acadêmico</option>
-                        <option>Portal Web</option>
-                        <option>ERP Financeiro</option>
+                    <select id="filtroProjeto" onchange="filtrarTabela()">
 
                     </select>
 
@@ -90,12 +89,7 @@
 
                     <label>Status</label>
 
-                    <select>
-
-                        <option>Todos</option>
-                        <option>A Fazer</option>
-                        <option>Em Andamento</option>
-                        <option>Concluída</option>
+                    <select id="filtroStatus" onchange="filtrarTabela()">
 
                     </select>
 

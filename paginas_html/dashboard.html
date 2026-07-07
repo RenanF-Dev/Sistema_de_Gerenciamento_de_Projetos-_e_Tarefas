@@ -13,211 +13,215 @@
     <link rel="stylesheet" href="/css/forms.css">
     <link rel="stylesheet" href="/css/tables.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="/js/script.js"></script>
+    <script src="/js/dashboard.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body>
 
-<div class="wrapper">
+    <div class="wrapper">
 
-    <!-- MENU LATERAL -->
+        <!-- MENU LATERAL -->
 
-    <aside class="sidebar">
+        <aside class="sidebar">
 
-        <div class="logo">
-            ProjectManager
-        </div>
-
-        <ul>
-
-            <li><a href="dashboard.html">🏠 Dashboard</a></li>
-
-            <li><a href="projetos.html">📁 Projetos</a></li>
-
-            <li><a href="tarefas.html">✅ Tarefas</a></li>
-
-            <li><a href="usuarios.html">👥 Usuários</a></li>
-
-            <li><a href="notificacoes.html">🔔 Notificações</a></li>
-
-            <li><a href="index.html">🚪 Sair</a></li>
-
-        </ul>
-
-    </aside>
-
-    <!-- CONTEÚDO -->
-
-    <main class="content">
-
-        <div class="header">
-
-            <h2>Dashboard</h2>
-
-            <h3>Bem-vindo, Administrador</h3>
-
-        </div>
-
-        <!-- CARDS -->
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>Projetos</h3>
-                <span>12</span>
+            <div class="logo">
+                ProjectManager
             </div>
 
-            <div class="card">
-                <h3>Tarefas</h3>
-                <span>43</span>
+            <ul>
+
+                <li><a href="dashboard.html">🏠 Dashboard</a></li>
+
+                <li><a href="projetos.html">📁 Projetos</a></li>
+
+                <li><a href="tarefas.html">✅ Tarefas</a></li>
+
+                <li><a href="usuarios.html">👥 Usuários</a></li>
+
+                <li><a href="notificacoes.html">🔔 Notificações</a></li>
+
+                <li><a href="index.html">🚪 Sair</a></li>
+
+            </ul>
+
+        </aside>
+
+        <!-- CONTEÚDO -->
+
+        <main class="content">
+
+            <div class="header">
+
+                <h2>Dashboard</h2>
+
+                <h3>Bem-vindo, Administrador</h3>
+
             </div>
 
-            <div class="card">
-                <h3>Concluídas</h3>
-                <span>20</span>
+            <!-- CARDS -->
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Projetos</h3>
+                    <span id="totalProjetos">12</span>
+                </div>
+
+                <div class="card">
+                    <h3>Tarefas</h3>
+                    <span id="totalTarefas">43</span>
+                </div>
+
+                <div class="card">
+                    <h3>Concluídas</h3>
+                    <span id="totalConcluidas">20</span>
+                </div>
+
+                <div class="card">
+                    <h3>Em andamento</h3>
+                    <span id="totalConcluidas">20</span>
+                </div>
+
             </div>
 
-            <div class="card">
-                <h3>Em andamento</h3>
-                <span>15</span>
+            <!-- TABELA -->
+
+            <div class="form">
+
+                <h2>Últimas tarefas</h2>
+
+                <br>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Tarefa</th>
+
+                            <th>Projeto</th>
+
+                            <th>Responsável</th>
+
+                            <th>Status</th>
+
+                            <th>Prazo</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>Desenvolver Login</td>
+
+                            <td>Sistema Acadêmico</td>
+
+                            <td>Renan</td>
+
+                            <td>
+                                <span class="status progress">
+                                    Em andamento
+                                </span>
+                            </td>
+
+                            <td>09/07/2026</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Modelagem do Banco</td>
+
+                            <td>Sistema Acadêmico</td>
+
+                            <td>Carlos</td>
+
+                            <td>
+                                <span class="status done">
+                                    Concluída
+                                </span>
+                            </td>
+
+                            <td>05/07/2026</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Criar Dashboard</td>
+
+                            <td>ERP Financeiro</td>
+
+                            <td>Ana</td>
+
+                            <td>
+                                <span class="status todo">
+                                    A Fazer
+                                </span>
+                            </td>
+
+                            <td>12/07/2026</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Documentação</td>
+
+                            <td>Portal Web</td>
+
+                            <td>Pedro</td>
+
+                            <td>
+                                <span class="status late">
+                                    Atrasada
+                                </span>
+                            </td>
+
+                            <td>01/07/2026</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
             </div>
-
-        </div>
-
-        <!-- TABELA -->
-
-        <div class="form">
-
-            <h2>Últimas tarefas</h2>
 
             <br>
 
-            <table>
+            <!-- NOTIFICAÇÕES -->
 
-                <thead>
+            <div class="form">
 
-                    <tr>
+                <h2>Notificações</h2>
 
-                        <th>Tarefa</th>
+                <br>
 
-                        <th>Projeto</th>
+                <p>🔴 API Financeira está com prazo vencido.</p>
 
-                        <th>Responsável</th>
+                <br>
 
-                        <th>Status</th>
+                <p>🟡 Projeto Sistema ERP vence amanhã.</p>
 
-                        <th>Prazo</th>
+                <br>
 
-                    </tr>
+                <p>🟢 Cadastro de Usuários concluído com sucesso.</p>
 
-                </thead>
+            </div>
 
-                <tbody>
+        </main>
 
-                    <tr>
-
-                        <td>Desenvolver Login</td>
-
-                        <td>Sistema Acadêmico</td>
-
-                        <td>Renan</td>
-
-                        <td>
-                            <span class="status progress">
-                                Em andamento
-                            </span>
-                        </td>
-
-                        <td>09/07/2026</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>Modelagem do Banco</td>
-
-                        <td>Sistema Acadêmico</td>
-
-                        <td>Carlos</td>
-
-                        <td>
-                            <span class="status done">
-                                Concluída
-                            </span>
-                        </td>
-
-                        <td>05/07/2026</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>Criar Dashboard</td>
-
-                        <td>ERP Financeiro</td>
-
-                        <td>Ana</td>
-
-                        <td>
-                            <span class="status todo">
-                                A Fazer
-                            </span>
-                        </td>
-
-                        <td>12/07/2026</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>Documentação</td>
-
-                        <td>Portal Web</td>
-
-                        <td>Pedro</td>
-
-                        <td>
-                            <span class="status late">
-                                Atrasada
-                            </span>
-                        </td>
-
-                        <td>01/07/2026</td>
-
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </div>
-
-        <br>
-
-        <!-- NOTIFICAÇÕES -->
-
-        <div class="form">
-
-            <h2>Notificações</h2>
-
-            <br>
-
-            <p>🔴 API Financeira está com prazo vencido.</p>
-
-            <br>
-
-            <p>🟡 Projeto Sistema ERP vence amanhã.</p>
-
-            <br>
-
-            <p>🟢 Cadastro de Usuários concluído com sucesso.</p>
-
-        </div>
-
-    </main>
-
-</div>
+    </div>
 
 </body>
 
