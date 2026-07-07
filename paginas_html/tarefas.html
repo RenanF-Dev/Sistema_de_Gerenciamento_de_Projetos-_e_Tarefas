@@ -1,11 +1,389 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarefas</title>
+
+    <title>Tarefas | ProjectManager</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    
+
+<div class="wrapper">
+
+    <!-- MENU LATERAL -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            ProjectManager
+        </div>
+
+        <ul>
+
+            <li><a href="dashboard.html">🏠 Dashboard</a></li>
+
+            <li><a href="projetos.html">📁 Projetos</a></li>
+
+            <li><a href="tarefas.html">✅ Tarefas</a></li>
+
+            <li><a href="usuarios.html">👥 Usuários</a></li>
+
+            <li><a href="notificacoes.html">🔔 Notificações</a></li>
+
+            <li><a href="index.html">🚪 Sair</a></li>
+
+        </ul>
+
+    </aside>
+
+    <!-- CONTEÚDO -->
+
+    <main class="content">
+
+        <div class="header">
+
+            <h2>Gerenciamento de Tarefas</h2>
+
+            <button class="btn-blue btn-small">
+                + Nova Tarefa
+            </button>
+
+        </div>
+
+        <!-- FILTROS -->
+
+        <div class="form">
+
+            <h3>Filtros</h3>
+
+            <br>
+
+            <div class="grid-3">
+
+                <div class="form-group">
+
+                    <label>Projeto</label>
+
+                    <select>
+
+                        <option>Todos</option>
+                        <option>Sistema Acadêmico</option>
+                        <option>Portal Web</option>
+                        <option>ERP Financeiro</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Status</label>
+
+                    <select>
+
+                        <option>Todos</option>
+                        <option>A Fazer</option>
+                        <option>Em Andamento</option>
+                        <option>Concluída</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Pesquisar</label>
+
+                    <input type="text" placeholder="Nome da tarefa">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <br>
+
+        <!-- TABELA -->
+
+        <div class="form">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Tarefa</th>
+                        <th>Projeto</th>
+                        <th>Responsável</th>
+                        <th>Prioridade</th>
+                        <th>Status</th>
+                        <th>Prazo</th>
+                        <th>Ações</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>1</td>
+                        <td>Criar Login</td>
+                        <td>Sistema Acadêmico</td>
+                        <td>Renan Lima</td>
+                        <td>Alta</td>
+
+                        <td>
+
+                            <span class="status progress">
+                                Em andamento
+                            </span>
+
+                        </td>
+
+                        <td>10/07/2026</td>
+
+                        <td>
+
+                            <button class="btn-yellow btn-small">
+                                Editar
+                            </button>
+
+                            <button class="btn-red btn-small">
+                                Excluir
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>2</td>
+                        <td>Modelar Banco</td>
+                        <td>Sistema Acadêmico</td>
+                        <td>Carlos Oliveira</td>
+                        <td>Média</td>
+
+                        <td>
+
+                            <span class="status done">
+                                Concluída
+                            </span>
+
+                        </td>
+
+                        <td>08/07/2026</td>
+
+                        <td>
+
+                            <button class="btn-yellow btn-small">
+                                Editar
+                            </button>
+
+                            <button class="btn-red btn-small">
+                                Excluir
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>3</td>
+                        <td>Dashboard</td>
+                        <td>Portal Web</td>
+                        <td>Ana Souza</td>
+                        <td>Alta</td>
+
+                        <td>
+
+                            <span class="status todo">
+                                A Fazer
+                            </span>
+
+                        </td>
+
+                        <td>15/07/2026</td>
+
+                        <td>
+
+                            <button class="btn-yellow btn-small">
+                                Editar
+                            </button>
+
+                            <button class="btn-red btn-small">
+                                Excluir
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>4</td>
+                        <td>Documentação</td>
+                        <td>ERP Financeiro</td>
+                        <td>Pedro Santos</td>
+                        <td>Baixa</td>
+
+                        <td>
+
+                            <span class="status late">
+                                Atrasada
+                            </span>
+
+                        </td>
+
+                        <td>05/07/2026</td>
+
+                        <td>
+
+                            <button class="btn-yellow btn-small">
+                                Editar
+                            </button>
+
+                            <button class="btn-red btn-small">
+                                Excluir
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <br>
+
+        <!-- FORMULÁRIO -->
+
+        <div class="form">
+
+            <h2>Nova Tarefa</h2>
+
+            <br>
+
+            <div class="grid-2">
+
+                <div class="form-group">
+
+                    <label>Nome da Tarefa</label>
+
+                    <input
+                        type="text"
+                        placeholder="Digite a tarefa">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Projeto</label>
+
+                    <select>
+
+                        <option>Sistema Acadêmico</option>
+                        <option>Portal Web</option>
+                        <option>ERP Financeiro</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Responsável</label>
+
+                    <select>
+
+                        <option>Renan Lima</option>
+                        <option>Ana Souza</option>
+                        <option>Carlos Oliveira</option>
+                        <option>Pedro Santos</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Prioridade</label>
+
+                    <select>
+
+                        <option>Alta</option>
+                        <option>Média</option>
+                        <option>Baixa</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Status</label>
+
+                    <select>
+
+                        <option>A Fazer</option>
+                        <option>Em Andamento</option>
+                        <option>Concluída</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Prazo</label>
+
+                    <input type="date">
+
+                </div>
+
+            </div>
+
+            <br>
+
+            <div class="form-group">
+
+                <label>Descrição</label>
+
+                <textarea placeholder="Descrição da tarefa"></textarea>
+
+            </div>
+
+            <br>
+
+            <button class="btn btn-blue">
+
+                Salvar Tarefa
+
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
 </body>
+
 </html>
