@@ -15,268 +15,281 @@
 
     <script src="/js/script.js"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body>
 
-<div class="wrapper">
+    <div class="wrapper">
 
-    <!-- MENU LATERAL -->
+        <!-- MENU LATERAL -->
 
-    <aside class="sidebar">
+        <aside class="sidebar">
 
-        <div class="logo">
-            ProjectManager
-        </div>
+            <div class="logo">
+                ProjectManager
+            </div>
 
-        <ul>
+            <ul>
 
-            <li><a href="dashboard.html">🏠 Dashboard</a></li>
+                <li id="menuDashboard">
+                    <a href="dashboard.html">🏠 Dashboard</a>
+                </li>
 
-            <li><a href="projetos.html">📁 Projetos</a></li>
+                <li id="menuProjetos">
+                    <a href="projetos.html">📁 Projetos</a>
+                </li>
 
-            <li><a href="tarefas.html">✅ Tarefas</a></li>
+                <li id="menuTarefas">
+                    <a href="tarefas.html">✅ Tarefas</a>
+                </li>
 
-            <li><a href="usuarios.html">👥 Usuários</a></li>
+                <li id="menuUsuarios">
+                    <a href="usuarios.html">👥 Usuários</a>
+                </li>
 
-            <li><a href="notificacoes.html">🔔 Notificações</a></li>
+                <li id="menuNotificacoes">
+                    <a href="notificacoes.html">🔔 Notificações</a>
+                </li>
 
-            <li><a href="index.html">🚪 Sair</a></li>
+                <li>
+                    <a href="index.html">🚪 Sair</a>
+                </li>
 
-        </ul>
+            </ul>
 
-    </aside>
+        </aside>
 
-    <!-- CONTEÚDO -->
+        <!-- CONTEÚDO -->
 
-    <main class="content">
+        <main class="content">
 
-        <div class="header">
+            <div class="header">
 
-            <h2>Gerenciamento de Usuários</h2>
+                <h2>Gerenciamento de Usuários</h2>
 
-            <button class="btn-blue btn-small">
-                + Novo Usuário
-            </button>
+                <button class="btn-blue btn-small">
+                    + Novo Usuário
+                </button>
 
-        </div>
+            </div>
 
-        <!-- TABELA -->
+            <!-- TABELA -->
 
-        <div class="form">
+            <div class="form">
 
-            <table>
+                <table>
 
-                <thead>
+                    <thead>
 
-                    <tr>
+                        <tr>
 
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>E-mail</th>
-                        <th>Perfil</th>
-                        <th>Status</th>
-                        <th>Ações</th>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Perfil</th>
+                            <th>Status</th>
+                            <th>Ações</th>
 
-                    </tr>
+                        </tr>
 
-                </thead>
+                    </thead>
 
-                <tbody>
+                    <tbody>
 
-                    <tr>
+                        <tr>
 
-                        <td>1</td>
+                            <td>1</td>
 
-                        <td>Administrador</td>
+                            <td>Administrador</td>
 
-                        <td>admin@empresa.com</td>
+                            <td>admin@empresa.com</td>
 
-                        <td>Administrador</td>
+                            <td>Administrador</td>
 
-                        <td>
-                            <span class="status done">
-                                Ativo
-                            </span>
-                        </td>
+                            <td>
+                                <span class="status done">
+                                    Ativo
+                                </span>
+                            </td>
 
-                        <td>
+                            <td>
 
-                            <button class="btn-yellow btn-small">
-                                Editar
-                            </button>
+                                <button class="btn-yellow btn-small">
+                                    Editar
+                                </button>
 
-                            <button class="btn-red btn-small">
-                                Excluir
-                            </button>
+                                <button class="btn-red btn-small">
+                                    Excluir
+                                </button>
 
-                        </td>
+                            </td>
 
-                    </tr>
+                        </tr>
 
-                    <tr>
+                        <tr>
 
-                        <td>2</td>
+                            <td>2</td>
 
-                        <td>Renan Lima</td>
+                            <td>Renan Lima</td>
 
-                        <td>renan@email.com</td>
+                            <td>renan@email.com</td>
 
-                        <td>Gerente de Projeto</td>
+                            <td>Gerente de Projeto</td>
 
-                        <td>
-                            <span class="status progress">
-                                Ativo
-                            </span>
-                        </td>
+                            <td>
+                                <span class="status progress">
+                                    Ativo
+                                </span>
+                            </td>
 
-                        <td>
+                            <td>
 
-                            <button class="btn-yellow btn-small">
-                                Editar
-                            </button>
+                                <button class="btn-yellow btn-small">
+                                    Editar
+                                </button>
 
-                            <button class="btn-red btn-small">
-                                Excluir
-                            </button>
+                                <button class="btn-red btn-small">
+                                    Excluir
+                                </button>
 
-                        </td>
+                            </td>
 
-                    </tr>
+                        </tr>
 
-                    <tr>
+                        <tr>
 
-                        <td>3</td>
+                            <td>3</td>
 
-                        <td>Ana Souza</td>
+                            <td>Ana Souza</td>
 
-                        <td>ana@email.com</td>
+                            <td>ana@email.com</td>
 
-                        <td>Usuário</td>
+                            <td>Usuário</td>
 
-                        <td>
-                            <span class="status done">
-                                Ativo
-                            </span>
-                        </td>
+                            <td>
+                                <span class="status done">
+                                    Ativo
+                                </span>
+                            </td>
 
-                        <td>
+                            <td>
 
-                            <button class="btn-yellow btn-small">
-                                Editar
-                            </button>
+                                <button class="btn-yellow btn-small">
+                                    Editar
+                                </button>
 
-                            <button class="btn-red btn-small">
-                                Excluir
-                            </button>
+                                <button class="btn-red btn-small">
+                                    Excluir
+                                </button>
 
-                        </td>
+                            </td>
 
-                    </tr>
+                        </tr>
 
-                    <tr>
+                        <tr>
 
-                        <td>4</td>
+                            <td>4</td>
 
-                        <td>Carlos Oliveira</td>
+                            <td>Carlos Oliveira</td>
 
-                        <td>carlos@email.com</td>
+                            <td>carlos@email.com</td>
 
-                        <td>Usuário</td>
+                            <td>Usuário</td>
 
-                        <td>
-                            <span class="status late">
-                                Inativo
-                            </span>
-                        </td>
+                            <td>
+                                <span class="status late">
+                                    Inativo
+                                </span>
+                            </td>
 
-                        <td>
+                            <td>
 
-                            <button class="btn-yellow btn-small">
-                                Editar
-                            </button>
+                                <button class="btn-yellow btn-small">
+                                    Editar
+                                </button>
 
-                            <button class="btn-red btn-small">
-                                Excluir
-                            </button>
+                                <button class="btn-red btn-small">
+                                    Excluir
+                                </button>
 
-                        </td>
+                            </td>
 
-                    </tr>
+                        </tr>
 
-                </tbody>
+                    </tbody>
 
-            </table>
-
-        </div>
-
-        <br>
-
-        <!-- FORMULÁRIO -->
-
-        <div class="form">
-
-            <h2>Novo Usuário</h2>
-
-            <br>
-
-            <div class="grid-2">
-
-                <div class="form-group">
-
-                    <label>Nome</label>
-
-                    <input type="text" placeholder="Nome completo">
-
-                </div>
-
-                <div class="form-group">
-
-                    <label>E-mail</label>
-
-                    <input type="email" placeholder="email@empresa.com">
-
-                </div>
-
-                <div class="form-group">
-
-                    <label>Senha</label>
-
-                    <input type="password">
-
-                </div>
-
-                <div class="form-group">
-
-                    <label>Perfil</label>
-
-                    <select>
-
-                        <option>Administrador</option>
-
-                        <option>Gerente de Projeto</option>
-
-                        <option>Usuário</option>
-
-                    </select>
-
-                </div>
+                </table>
 
             </div>
 
             <br>
 
-            <button class="btn btn-blue">
-                Salvar Usuário
-            </button>
+            <!-- FORMULÁRIO -->
 
-        </div>
+            <div class="form">
 
-    </main>
+                <h2>Novo Usuário</h2>
 
-</div>
+                <br>
+
+                <div class="grid-2">
+
+                    <div class="form-group">
+
+                        <label>Nome</label>
+
+                        <input type="text" placeholder="Nome completo">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>E-mail</label>
+
+                        <input type="email" placeholder="email@empresa.com">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Senha</label>
+
+                        <input type="password">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Perfil</label>
+
+                        <select>
+
+                            <option>Administrador</option>
+
+                            <option>Gerente de Projeto</option>
+
+                            <option>Usuário</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <br>
+
+                <button class="btn btn-blue">
+                    Salvar Usuário
+                </button>
+
+            </div>
+
+        </main>
+
+    </div>
 
 </body>
 
