@@ -1,0 +1,114 @@
+/* ===========================
+   TABELAS
+=========================== */
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+
+}
+
+thead{
+
+    background:#2563EB;
+    color:#fff;
+
+}
+
+th{
+
+    padding:16px;
+    text-align:left;
+    font-weight:600;
+
+}
+
+td{
+
+    padding:15px;
+    border-bottom:1px solid #EEE;
+
+}
+
+tbody tr{
+
+    transition:.3s;
+
+}
+
+tbody tr:hover{
+
+    background:#F8FAFC;
+
+}
+
+.status{
+
+    padding:7px 14px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:bold;
+
+}
+
+.todo{
+
+    background:#FDE68A;
+    color:#92400E;
+
+}
+
+.progress{
+
+    background:#BFDBFE;
+    color:#1E40AF;
+
+}
+
+.done{
+
+    background:#BBF7D0;
+    color:#166534;
+
+}
+
+.late{
+
+    background:#FECACA;
+    color:#991B1B;
+
+}
+
+.actions{
+
+    display:flex;
+    gap:8px;
+
+}
+
+.table-responsive{
+
+    overflow-x:auto;
+
+}
+
+@media(max-width:900px){
+
+table{
+
+font-size:13px;
+
+}
+
+th,
+td{
+
+padding:10px;
+
+}
+
+}
