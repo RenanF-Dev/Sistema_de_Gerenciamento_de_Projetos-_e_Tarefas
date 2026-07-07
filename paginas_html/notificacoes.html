@@ -1,11 +1,256 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notificações</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Notificações | ProjectManager</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    
+
+<div class="wrapper">
+
+    <!-- MENU LATERAL -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            ProjectManager
+        </div>
+
+        <ul>
+
+            <li><a href="dashboard.html">🏠 Dashboard</a></li>
+
+            <li><a href="projetos.html">📁 Projetos</a></li>
+
+            <li><a href="tarefas.html">✅ Tarefas</a></li>
+
+            <li><a href="usuarios.html">👥 Usuários</a></li>
+
+            <li><a href="notificacoes.html">🔔 Notificações</a></li>
+
+            <li><a href="index.html">🚪 Sair</a></li>
+
+        </ul>
+
+    </aside>
+
+    <!-- CONTEÚDO -->
+
+    <main class="content">
+
+        <div class="header">
+
+            <h2>Central de Notificações</h2>
+
+        </div>
+
+        <!-- RESUMO -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Tarefas Atrasadas</h3>
+
+                <span>3</span>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Vencem Hoje</h3>
+
+                <span>2</span>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Próximos 7 Dias</h3>
+
+                <span>8</span>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Concluídas Hoje</h3>
+
+                <span>5</span>
+
+            </div>
+
+        </div>
+
+        <!-- ALERTAS -->
+
+        <div class="form">
+
+            <h2>Alertas Recentes</h2>
+
+            <br>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Prioridade</th>
+                        <th>Tarefa</th>
+                        <th>Projeto</th>
+                        <th>Responsável</th>
+                        <th>Prazo</th>
+                        <th>Situação</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>🔴 Alta</td>
+
+                        <td>Documentação Final</td>
+
+                        <td>Portal Web</td>
+
+                        <td>Pedro Santos</td>
+
+                        <td>05/07/2026</td>
+
+                        <td>
+
+                            <span class="status late">
+
+                                Atrasada
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>🟡 Média</td>
+
+                        <td>Implementar Login</td>
+
+                        <td>Sistema Acadêmico</td>
+
+                        <td>Renan Lima</td>
+
+                        <td>07/07/2026</td>
+
+                        <td>
+
+                            <span class="status progress">
+
+                                Vence Hoje
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>🟢 Baixa</td>
+
+                        <td>Atualizar Dashboard</td>
+
+                        <td>ERP Financeiro</td>
+
+                        <td>Ana Souza</td>
+
+                        <td>10/07/2026</td>
+
+                        <td>
+
+                            <span class="status todo">
+
+                                Próxima
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>🟢 Baixa</td>
+
+                        <td>Modelagem do Banco</td>
+
+                        <td>Sistema Acadêmico</td>
+
+                        <td>Carlos Oliveira</td>
+
+                        <td>06/07/2026</td>
+
+                        <td>
+
+                            <span class="status done">
+
+                                Concluída
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <br>
+
+        <!-- MENSAGENS -->
+
+        <div class="form">
+
+            <h2>Mensagens do Sistema</h2>
+
+            <br>
+
+            <p>🔴 Existem tarefas com prazo expirado que precisam de atenção.</p>
+
+            <br>
+
+            <p>🟡 Dois projetos possuem atividades com vencimento para hoje.</p>
+
+            <br>
+
+            <p>🟢 Cinco tarefas foram concluídas nas últimas 24 horas.</p>
+
+            <br>
+
+            <p>📢 Lembre-se de atualizar o status das tarefas para manter o dashboard sempre atualizado.</p>
+
+        </div>
+
+    </main>
+
+</div>
+
 </body>
+
 </html>
