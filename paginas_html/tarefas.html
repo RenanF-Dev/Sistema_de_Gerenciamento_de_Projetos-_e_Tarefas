@@ -205,9 +205,27 @@
 
                             <td>
 
-                                <span class="status done">
-                                    Concluída
-                                </span>
+                                <select class="status-select" onchange="alterarStatus(this)">
+
+                                    <option value="todo">
+
+                                        A Fazer
+
+                                    </option>
+
+                                    <option value="progress">
+
+                                        Em andamento
+
+                                    </option>
+
+                                    <option value="done" selected>
+
+                                        Concluída
+
+                                    </option>
+
+                                </select>
 
                             </td>
 
@@ -237,9 +255,27 @@
 
                             <td>
 
-                                <span class="status todo">
-                                    A Fazer
-                                </span>
+                                <select class="status-select" onchange="alterarStatus(this)">
+
+                                    <option value="todo">
+
+                                        A Fazer
+
+                                    </option>
+
+                                    <option value="progress">
+
+                                        Em andamento
+
+                                    </option>
+
+                                    <option value="done" selected>
+
+                                        Concluída
+
+                                    </option>
+
+                                </select>
 
                             </td>
 
@@ -269,9 +305,21 @@
 
                             <td>
 
-                                <span class="status late">
-                                    Atrasada
-                                </span>
+                                <select class="status-select" onchange="alterarStatus(this)">
+
+                                    <option value="todo" selected>
+                                        A Fazer
+                                    </option>
+
+                                    <option value="progress">
+                                        Em andamento
+                                    </option>
+
+                                    <option value="done">
+                                        Concluída
+                                    </option>
+
+                                </select>
 
                             </td>
 
