@@ -13,14 +13,14 @@
     <link rel="stylesheet" href="../css/forms.css">
     <link rel="stylesheet" href="../css/tables.css">
 
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
-    
+        rel="stylesheet">
+
 </head>
 
 <body class="login-page">
-    
+
     <script src="../js/script.js"></script>
 
     <div class="login-box">
@@ -33,15 +33,19 @@
 
                 <label>Perfil</label>
 
-                <select id="perfilLogin" required>
+                <div class="form-group">
 
-                    <option value="administrador">Administrador</option>
+                    <label for="senha">Senha</label>
 
-                    <option value="gerente">Gerente</option>
+                    <input type="password" id="senha" placeholder="Digite sua senha" required>
 
-                    <option value="usuario">Usuário</option>
+                </div>
 
-                </select>
+                <button type="button" class="btn" onclick="fazerLogin()">
+
+                    Entrar
+
+                </button>
 
             </div>
 
