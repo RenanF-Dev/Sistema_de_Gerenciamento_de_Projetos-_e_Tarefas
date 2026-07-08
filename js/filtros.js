@@ -4,21 +4,30 @@
 
 function filtrarTabela(){
 
-    const projeto = document.getElementById("filtroProjeto").value.toLowerCase();
+    const projeto = document.getElementById("filtroProjeto").value;
 
-    const status = document.getElementById("filtroStatus").value.toLowerCase();
+    const status = document.getElementById("filtroStatus").value;
 
     const linhas = document.querySelectorAll("tbody tr");
 
     linhas.forEach(linha=>{
 
-        const texto = linha.innerText.toLowerCase();
+        const nomeProjeto = linha.cells[2].textContent.trim();
 
-        const projetoOk = projeto === "todos" || texto.includes(projeto);
+        const statusAtual = linha.querySelector(".status-select").value;
 
-        const statusOk = status === "todos" || texto.includes(status);
+        const projetoOK =
+            projeto === "todos" ||
+            projeto === nomeProjeto;
 
-        linha.style.display = (projetoOk && statusOk) ? "" : "none";
+        const statusOK =
+            status === "todos" ||
+            status === statusAtual;
+
+        linha.style.display =
+            (projetoOK && statusOK)
+            ? ""
+            : "none";
 
     });
 
