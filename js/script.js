@@ -55,68 +55,47 @@ function validarFormulario(formId) {
 ====================================== */
 
 function fazerLogin() {
-  const perfil = document.getElementById("perfilLogin").value;
+  const login = document.getElementById("login").value.trim();
+
+  const senha = document.getElementById("senha").value.trim();
+
+  let perfil = "";
+
+  if (login === "admin" && senha === "admin123") {
+    perfil = "administrador";
+  } else if (login === "gerente" && senha === "gerente123") {
+    perfil = "gerente";
+  } else if (login === "usuario" && senha === "usuario123") {
+    perfil = "usuario";
+  } else {
+    alert("Login ou senha inválidos.");
+
+    return;
+  }
 
   localStorage.setItem("perfilUsuario", perfil);
+
+  localStorage.setItem("usuarioLogado", login);
 
   window.location.href = "dashboard.html";
 }
 
-document.addEventListener("DOMContentLoaded", aplicarPermissoes);
+function atualizarPerfil() {
+  const perfil = document.getElementById("perfilAtual");
 
-function aplicarPermissoes() {
-  const perfilUsuario = localStorage.getItem("perfilUsuario") || "usuario";
-  const menuUsuarios = document.getElementById("menuUsuarios");
-  const menuProjetos = document.getElementById("menuProjetos");
+  if (!perfil) return;
 
-  switch (perfilUsuario) {
-    case "administrador":
-      break;
+  const nome = localStorage.getItem("usuarioLogado");
 
-    case "gerente":
-      if (menuUsuarios) {
-        menuUsuarios.style.display = "none";
-      }
+  const tipo = localStorage.getItem("perfilUsuario");
 
-      break;
-
-    case "usuario":
-      if (menuUsuarios) {
-        menuUsuarios.style.display = "none";
-      }
-
-      if (menuProjetos) {
-        menuProjetos.style.display = "none";
-      }
-
-      break;
-  }
+  perfil.innerHTML = `Bem-vindo, ${nome} (${tipo})`;
 }
 
-function atualizarPerfil(){
+function logout() {
+  localStorage.clear();
 
-    const perfil=document.getElementById("perfilAtual");
-
-    if(!perfil) return;
-
-    const perfilUsuario = localStorage.getItem("perfilUsuario") || "usuario";
-
-    switch(perfilUsuario){
-
-        case "administrador":
-            perfil.innerHTML="Bem-vindo, Administrador";
-            break;
-
-        case "gerente":
-            perfil.innerHTML="Bem-vindo, Gerente de Projeto";
-            break;
-
-        default:
-            perfil.innerHTML="Bem-vindo, Usuário";
-            break;
-
-    }
-
+  window.location.href = "index.html";
 }
 
 document.addEventListener("DOMContentLoaded", atualizarPerfil);

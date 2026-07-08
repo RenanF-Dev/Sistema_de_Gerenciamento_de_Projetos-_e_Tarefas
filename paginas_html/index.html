@@ -23,47 +23,35 @@
 
     <script src="../js/script.js"></script>
 
-    <div class="login-box">
+    <form id="loginForm">
 
-        <h1>ProjectManager</h1>
+        <div class="form-group">
 
-        <form action="dashboard.html">
+            <label for="login">Login</label>
 
-            <div class="form-group">
+            <input type="text" id="login" placeholder="Digite seu login" required>
 
-                <label>Perfil</label>
+        </div>
 
-                <div class="form-group">
+        <div class="form-group">
 
-                    <label for="senha">Senha</label>
+            <label for="senha">Senha</label>
 
-                    <input type="password" id="senha" placeholder="Digite sua senha" required>
+            <input type="password" id="senha" placeholder="Digite sua senha" required>
 
-                </div>
+        </div>
 
-                <button type="button" class="btn" onclick="fazerLogin()">
+        <button type="button" class="btn" onclick="fazerLogin()">
 
-                    Entrar
+            Entrar
 
-                </button>
+        </button>
 
-            </div>
+    </form>
 
-            <button type="button" class="btn" onclick="fazerLogin()">
-
-                Entrar
-
-            </button>
-
-        </form>
-
-        <a href="cadastro.html" class="link">
-
-            Ainda não possui cadastro? Clique aqui
-
-        </a>
-
-    </div>
+    <a href="cadastro.html" class="link">
+        Criar uma conta
+    </a>
 
 </body>
 
