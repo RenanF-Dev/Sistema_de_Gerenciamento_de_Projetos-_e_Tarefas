@@ -1,33 +1,28 @@
 /* ======================================
    FILTROS
 ====================================== */
-
-function filtrarTabela(){
+function filtrarTabela() {
 
     const projeto = document.getElementById("filtroProjeto").value;
-
     const status = document.getElementById("filtroStatus").value;
 
     const linhas = document.querySelectorAll("tbody tr");
 
-    linhas.forEach(linha=>{
+    linhas.forEach(linha => {
 
-        const nomeProjeto = linha.cells[2].textContent.trim();
+        const projetoLinha = linha.cells[2].textContent.trim();
 
-        const statusAtual = linha.querySelector(".status-select").value;
+        const selectStatus = linha.querySelector(".status-select");
+
+        const statusLinha = selectStatus ? selectStatus.value : "";
 
         const projetoOK =
-            projeto === "todos" ||
-            projeto === nomeProjeto;
+            projeto === "todos" || projeto === projetoLinha;
 
         const statusOK =
-            status === "todos" ||
-            status === statusAtual;
+            status === "todos" || status === statusLinha;
 
-        linha.style.display =
-            (projetoOK && statusOK)
-            ? ""
-            : "none";
+        linha.style.display = (projetoOK && statusOK) ? "" : "none";
 
     });
 
