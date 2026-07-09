@@ -1,12 +1,19 @@
 /* ======================================
    SCRIPT GLOBAL
 ====================================== */
-const perfil = localStorage.getItem("perfil");
 
 document.addEventListener("DOMContentLoaded", () => {
+
   console.log("Sistema iniciado.");
 
   mostrarMensagemBoasVindas();
+
+  atualizarPerfil();
+
+  controlarPermissoesUsuarios();
+
+  controlarPerfilCadastro();
+
 });
 
 /* ======================================
@@ -99,40 +106,11 @@ function logout() {
   window.location.href = "index.html";
 }
 
-ddocument.addEventListener("DOMContentLoaded", () => {
-  atualizarPerfil();
-
-  controlarPermissoesUsuarios();
-
-  controlarPerfilCadastro();
-});
-
 /* ======================================
    CONTROLE DE PERMISSÕES - USUÁRIOS
 ====================================== */
 
-function controlarPermissoesUsuarios() {
-  const btnNovoUsuario = document.getElementById("btnNovoUsuario");
 
-  // Se não existir essa página, não faz nada.
-  if (!btnNovoUsuario) return;
-
-  const perfil = localStorage.getItem("perfilUsuario");
-
-  const btnsEditar = document.querySelectorAll(".editar-usuario");
-  const btnsExcluir = document.querySelectorAll(".excluir-usuario");
-  const linhas = document.querySelectorAll("tbody tr");
-
-  // ===============================
-  // ADMINISTRADOR
-  // ===============================
-
-  if (perfil === "administrador") {
-    return;
-  }
-
-  // ===============================
-  // GERENTE
   // ===============================
 
   if (perfil === "gerente") {
@@ -168,26 +146,92 @@ function controlarPermissoesUsuarios() {
   btnsExcluir.forEach((botao) => {
     botao.style.display = "none";
   });
-}
+
 
 /* ======================================
    CONTROLE DO SELECT DE PERFIL
 ====================================== */
 
-function controlarPerfilCadastro() {
-  const select = document.getElementById("perfilUsuario");
+function controlarPermissoesUsuarios() {
 
-  if (!select) return;
+    const btnNovoUsuario = document.getElementById("btnNovoUsuario");
 
-  const perfil = localStorage.getItem("perfilUsuario");
+    if (!btnNovoUsuario) return;
 
-  if (perfil === "administrador") {
-    return;
-  }
+    const perfil = localStorage.getItem("perfilUsuario");
 
-  if (perfil === "gerente") {
-    select.innerHTML = `
-      <option value="usuario">Usuário</option>
-    `;
-  }
+    const btnsEditar = document.querySelectorAll(".editar-usuario");
+    const btnsExcluir = document.querySelectorAll(".excluir-usuario");
+    const linhas = document.querySelectorAll("tbody tr");
+
+    // ===========================
+    // ADMINISTRADOR
+    // ===========================
+
+    if (perfil === "administrador") {
+
+        return;
+
+    }
+
+    // ===========================
+    // GERENTE
+    // ===========================
+
+    if (perfil === "gerente") {
+
+        btnsExcluir.forEach(botao => {
+
+            botao.style.display = "none";
+
+        });
+
+        linhas.forEach(linha => {
+
+            const perfilLinha = linha.dataset.perfil;
+
+            // Esconde Administradores e Gerentes
+            if (perfilLinha === "Administrador" || perfilLinha === "Gerente") {
+
+                linha.style.display = "none";
+
+            }
+
+        });
+
+        return;
+
+    }
+
+    // ===========================
+    // USUÁRIO
+    // ===========================
+
+    btnNovoUsuario.style.display = "none";
+
+    linhas.forEach(linha => {
+
+        const perfilLinha = linha.dataset.perfil;
+
+        // Esconde Administradores e Gerentes
+        if (perfilLinha === "Administrador" || perfilLinha === "Gerente") {
+
+            linha.style.display = "none";
+
+        }
+
+    });
+
+    btnsEditar.forEach(botao => {
+
+        botao.style.display = "none";
+
+    });
+
+    btnsExcluir.forEach(botao => {
+
+        botao.style.display = "none";
+
+    });
+
 }
