@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="/css/forms.css">
     <link rel="stylesheet" href="/css/tables.css">
 
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
-    
+        rel="stylesheet">
+
 </head>
 
 <body>
@@ -70,224 +70,222 @@
 
                 <h2>Gerenciamento de Usuários</h2>
 
-                <button class="btn-blue btn-small">
+                <button class="btn-blue btn-small" id="btnNovoUsuario">
+
                     + Novo Usuário
+
                 </button>
 
             </div>
 
-            <!-- TABELA -->
+            <table>
 
-            <div class="form">
+                <thead>
 
-                <table>
+                    <tr>
 
-                    <thead>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Perfil</th>
+                        <th>Status</th>
+                        <th>Ações</th>
 
-                        <tr>
+                    </tr>
 
-                            <th>ID</th>
-                            <th>Nome</th>
-                            <th>E-mail</th>
-                            <th>Perfil</th>
-                            <th>Status</th>
-                            <th>Ações</th>
+                </thead>
 
-                        </tr>
+                <tbody>
 
-                    </thead>
+                    <tr data-perfil="Administrador">
 
-                    <tbody>
+                        <td>1</td>
 
-                        <tr>
+                        <td>Administrador</td>
 
-                            <td>1</td>
+                        <td>admin@empresa.com</td>
 
-                            <td>Administrador</td>
+                        <td>Administrador</td>
 
-                            <td>admin@empresa.com</td>
+                        <td>
+                            <span class="status done">
+                                Ativo
+                            </span>
+                        </td>
 
-                            <td>Administrador</td>
+                        <td>
 
-                            <td>
-                                <span class="status done">
-                                    Ativo
-                                </span>
-                            </td>
+                            <button class="btn-green btn-small editar-usuario">
+                                Editar
+                            </button>
 
-                            <td>
+                            <button class="btn-red btn-small excluir-usuario">
+                                Excluir
+                            </button>
 
-                                <button class="btn-yellow btn-small">
-                                    Editar
-                                </button>
+                        </td>
 
-                                <button class="btn-red btn-small">
-                                    Excluir
-                                </button>
+                    </tr>
 
-                            </td>
+                    <tr data-perfil="Gerente">
 
-                        </tr>
+                        <td>2</td>
 
-                        <tr>
+                        <td>Renan Lima</td>
 
-                            <td>2</td>
+                        <td>renan@email.com</td>
 
-                            <td>Renan Lima</td>
+                        <td>Gerente</td>
 
-                            <td>renan@email.com</td>
+                        <td>
+                            <span class="status progress">
+                                Ativo
+                            </span>
+                        </td>
 
-                            <td>Gerente de Projeto</td>
+                        <td>
 
-                            <td>
-                                <span class="status progress">
-                                    Ativo
-                                </span>
-                            </td>
+                            <button class="btn-yellow btn-small editar-usuario">
+                                Editar
+                            </button>
 
-                            <td>
+                            <button class="btn-red btn-small excluir-usuario">
+                                Excluir
+                            </button>
 
-                                <button class="btn-yellow btn-small">
-                                    Editar
-                                </button>
+                        </td>
 
-                                <button class="btn-red btn-small">
-                                    Excluir
-                                </button>
+                    </tr>
 
-                            </td>
+                    <tr data-perfil="Usuario">
 
-                        </tr>
+                        <td>3</td>
 
-                        <tr>
+                        <td>Ana Souza</td>
 
-                            <td>3</td>
+                        <td>ana@email.com</td>
 
-                            <td>Ana Souza</td>
+                        <td>Usuário</td>
 
-                            <td>ana@email.com</td>
+                        <td>
+                            <span class="status done">
+                                Ativo
+                            </span>
+                        </td>
 
-                            <td>Usuário</td>
+                        <td>
 
-                            <td>
-                                <span class="status done">
-                                    Ativo
-                                </span>
-                            </td>
+                            <button class="btn-yellow btn-small editar-usuario">
+                                Editar
+                            </button>
 
-                            <td>
+                            <button class="btn-red btn-small excluir-usuario">
+                                Excluir
+                            </button>
 
-                                <button class="btn-yellow btn-small">
-                                    Editar
-                                </button>
+                        </td>
 
-                                <button class="btn-red btn-small">
-                                    Excluir
-                                </button>
+                    </tr>
 
-                            </td>
+                    <tr data-perfil="Usuario">
 
-                        </tr>
+                        <td>4</td>
 
-                        <tr>
+                        <td>Carlos Oliveira</td>
 
-                            <td>4</td>
+                        <td>carlos@email.com</td>
 
-                            <td>Carlos Oliveira</td>
+                        <td>Usuário</td>
 
-                            <td>carlos@email.com</td>
+                        <td>
+                            <span class="status late">
+                                Inativo
+                            </span>
+                        </td>
 
-                            <td>Usuário</td>
+                        <td>
 
-                            <td>
-                                <span class="status late">
-                                    Inativo
-                                </span>
-                            </td>
+                            <button class="btn-yellow btn-small editar-usuario">
+                                Editar
+                            </button>
 
-                            <td>
+                            <button class="btn-red btn-small excluir-usuario">
+                                Excluir
+                            </button>
 
-                                <button class="btn-yellow btn-small">
-                                    Editar
-                                </button>
+                        </td>
 
-                                <button class="btn-red btn-small">
-                                    Excluir
-                                </button>
+                    </tr>
 
-                            </td>
+                </tbody>
 
-                        </tr>
+            </table>
 
-                    </tbody>
+    </div>
 
-                </table>
+    <br>
+
+    <!-- FORMULÁRIO -->
+
+    <div class="form">
+
+        <h2>Novo Usuário</h2>
+
+        <br>
+
+        <div class="grid-2">
+
+            <div class="form-group">
+
+                <label>Nome</label>
+
+                <input type="text" placeholder="Nome completo">
 
             </div>
 
-            <br>
+            <div class="form-group">
 
-            <!-- FORMULÁRIO -->
+                <label>E-mail</label>
 
-            <div class="form">
-
-                <h2>Novo Usuário</h2>
-
-                <br>
-
-                <div class="grid-2">
-
-                    <div class="form-group">
-
-                        <label>Nome</label>
-
-                        <input type="text" placeholder="Nome completo">
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label>E-mail</label>
-
-                        <input type="email" placeholder="email@empresa.com">
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label>Senha</label>
-
-                        <input type="password">
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label>Perfil</label>
-
-                        <select>
-
-                            <option>Administrador</option>
-
-                            <option>Gerente de Projeto</option>
-
-                            <option>Usuário</option>
-
-                        </select>
-
-                    </div>
-
-                </div>
-
-                <br>
-
-                <button class="btn btn-blue">
-                    Salvar Usuário
-                </button>
+                <input type="email" placeholder="email@empresa.com">
 
             </div>
 
-        </main>
+            <div class="form-group">
+
+                <label>Senha</label>
+
+                <input type="password">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Perfil</label>
+
+                <select>
+
+                    <option>Administrador</option>
+
+                    <option>Gerente de Projeto</option>
+
+                    <option>Usuário</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <br>
+
+        <button class="btn btn-blue">
+            Salvar Usuário
+        </button>
+
+    </div>
+
+    </main>
 
     </div>
 
