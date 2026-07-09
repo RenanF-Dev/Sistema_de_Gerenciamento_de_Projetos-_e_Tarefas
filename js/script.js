@@ -100,13 +100,11 @@ function logout() {
 }
 
 ddocument.addEventListener("DOMContentLoaded", () => {
-
   atualizarPerfil();
 
   controlarPermissoesUsuarios();
 
   controlarPerfilCadastro();
-
 });
 
 /* ======================================
@@ -114,7 +112,6 @@ ddocument.addEventListener("DOMContentLoaded", () => {
 ====================================== */
 
 function controlarPermissoesUsuarios() {
-
   const btnNovoUsuario = document.getElementById("btnNovoUsuario");
 
   // Se não existir essa página, não faz nada.
@@ -131,9 +128,7 @@ function controlarPermissoesUsuarios() {
   // ===============================
 
   if (perfil === "administrador") {
-
     return;
-
   }
 
   // ===============================
@@ -141,37 +136,23 @@ function controlarPermissoesUsuarios() {
   // ===============================
 
   if (perfil === "gerente") {
-
     // Gerente não pode excluir usuários
 
-    btnsExcluir.forEach(botao => {
-
+    btnsExcluir.forEach((botao) => {
       botao.style.display = "none";
-
     });
 
     // Só pode editar usuários comuns
 
-    linhas.forEach(linha => {
-
+    linhas.forEach((linha) => {
       const perfilLinha = linha.dataset.perfil;
 
       if (perfilLinha !== "Usuario") {
-
-        const editar = linha.querySelector(".editar-usuario");
-
-        if (editar) {
-
-          editar.style.display = "none";
-
-        }
-
+        linha.style.display = "none";
       }
-
     });
 
     return;
-
   }
 
   // ===============================
@@ -180,18 +161,13 @@ function controlarPermissoesUsuarios() {
 
   btnNovoUsuario.style.display = "none";
 
-  btnsEditar.forEach(botao => {
-
+  btnsEditar.forEach((botao) => {
     botao.style.display = "none";
-
   });
 
-  btnsExcluir.forEach(botao => {
-
+  btnsExcluir.forEach((botao) => {
     botao.style.display = "none";
-
   });
-
 }
 
 /* ======================================
@@ -199,7 +175,6 @@ function controlarPermissoesUsuarios() {
 ====================================== */
 
 function controlarPerfilCadastro() {
-
   const select = document.getElementById("perfilUsuario");
 
   if (!select) return;
@@ -207,17 +182,12 @@ function controlarPerfilCadastro() {
   const perfil = localStorage.getItem("perfilUsuario");
 
   if (perfil === "administrador") {
-
     return;
-
   }
 
   if (perfil === "gerente") {
-
     select.innerHTML = `
       <option value="usuario">Usuário</option>
     `;
-
   }
-
 }
