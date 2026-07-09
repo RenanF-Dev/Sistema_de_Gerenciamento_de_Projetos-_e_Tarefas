@@ -1,6 +1,7 @@
 /* ======================================
    SCRIPT GLOBAL
 ====================================== */
+const perfil = localStorage.getItem("perfil");
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Sistema iniciado.");
@@ -98,4 +99,125 @@ function logout() {
   window.location.href = "index.html";
 }
 
-document.addEventListener("DOMContentLoaded", atualizarPerfil);
+ddocument.addEventListener("DOMContentLoaded", () => {
+
+  atualizarPerfil();
+
+  controlarPermissoesUsuarios();
+
+  controlarPerfilCadastro();
+
+});
+
+/* ======================================
+   CONTROLE DE PERMISSÕES - USUÁRIOS
+====================================== */
+
+function controlarPermissoesUsuarios() {
+
+  const btnNovoUsuario = document.getElementById("btnNovoUsuario");
+
+  // Se não existir essa página, não faz nada.
+  if (!btnNovoUsuario) return;
+
+  const perfil = localStorage.getItem("perfilUsuario");
+
+  const btnsEditar = document.querySelectorAll(".editar-usuario");
+  const btnsExcluir = document.querySelectorAll(".excluir-usuario");
+  const linhas = document.querySelectorAll("tbody tr");
+
+  // ===============================
+  // ADMINISTRADOR
+  // ===============================
+
+  if (perfil === "administrador") {
+
+    return;
+
+  }
+
+  // ===============================
+  // GERENTE
+  // ===============================
+
+  if (perfil === "gerente") {
+
+    // Gerente não pode excluir usuários
+
+    btnsExcluir.forEach(botao => {
+
+      botao.style.display = "none";
+
+    });
+
+    // Só pode editar usuários comuns
+
+    linhas.forEach(linha => {
+
+      const perfilLinha = linha.dataset.perfil;
+
+      if (perfilLinha !== "Usuario") {
+
+        const editar = linha.querySelector(".editar-usuario");
+
+        if (editar) {
+
+          editar.style.display = "none";
+
+        }
+
+      }
+
+    });
+
+    return;
+
+  }
+
+  // ===============================
+  // USUÁRIO
+  // ===============================
+
+  btnNovoUsuario.style.display = "none";
+
+  btnsEditar.forEach(botao => {
+
+    botao.style.display = "none";
+
+  });
+
+  btnsExcluir.forEach(botao => {
+
+    botao.style.display = "none";
+
+  });
+
+}
+
+/* ======================================
+   CONTROLE DO SELECT DE PERFIL
+====================================== */
+
+function controlarPerfilCadastro() {
+
+  const select = document.getElementById("perfilUsuario");
+
+  if (!select) return;
+
+  const perfil = localStorage.getItem("perfilUsuario");
+
+  if (perfil === "administrador") {
+
+    return;
+
+  }
+
+  if (perfil === "gerente") {
+
+    select.innerHTML = `
+      <option value="usuario">Usuário</option>
+    `;
+
+  }
+
+}
